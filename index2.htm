@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+</head>
+
+<body style="background-color:#222222">
+<script>
+$(document).ready(function(){
+  //alert('a');
+  //alert( $(window).width() +' - '+ $(window).height() );
+  //alert( $(document).width() +' - '+ $(document).height() );
+  $("a#Toggle").click( function(){
+    //alert('b');
+    alert( $('#Window').css('border-left-width') );
+    alert( $(this).css('border-left-width') );
+    $('#Window').animate({
+      width: $(window).width(),
+      height: $(window).height()
+    } , 0);
+    $('#Window').fadeToggle( 250 );
+    //alert('c');
+
+  });
+});
+</script>
+<div style="top:0px;left:0px;border:2px solid #C0F;width:100px;height:20px;position:fixed;background-color:#FFF;">
+  <a href="#" id="Toggle">Toggle Window</a>
+</div>
+<div id="Window" style="top:20px;left:0px;border:2px solid #FC0;width:100px;height:100px;position:fixed;background-color:#000;display:none;opacity:0.7;">
+  aa
+</div>
+Crap<br />Crap1<br />Crap2<br />Crap3<br />Crap4<br />Crap5<br />Crap6<br />Crap7<br />Crap8<br />Crap9<br />
+Crap<br />Crap1<br />Crap2<br />Crap3<br />Crap4<br />Crap5<br />Crap6<br />Crap7<br />Crap8<br />Crap9<br />
+Crap<br />Crap1<br />Crap2<br />Crap3<br />Crap4<br />Crap5<br />Crap6<br />Crap7<br />Crap8<br />Crap9<br />
+Crap<br />Crap1<br />Crap2<br />Crap3<br />Crap4<br />Crap5<br />Crap6<br />Crap7<br />Crap8<br />Crap9<br />
+
+
+</body>
+
+</html>

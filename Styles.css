@@ -1,0 +1,41 @@
+body{ font-family:Arial, Helvetica, Verdana, sans-serif;font-size:12px; background-color:#3C3C3C; color:#FFF }
+fieldset { background-color:#202020; margin-top:10px;margin-bottom:10px; }
+
+a:link {color:#FFF; text-decoration:none;}      /* unvisited link */
+a:visited {color:#FFF; text-decoration:none;}  /* visited link */
+a:hover {color:#FFF; text-decoration:underline;}  /* mouse over link */
+a:active {color:#FFF; text-decoration:none;}  /* selected link */
+
+
+#Menu{ font-size: 20px; font-weight: bold; }
+#SubMenu{ font-size: 16px; }
+
+div.achievement_container{ float:none;border:1px solid #454545;background-color:#262626;height:60px;margin-bottom:10px;width:900px; }
+div.achievement_container_100{ border:1px solid #9DC34C; }
+
+div.achievement_deploy{ width:20px;height:60px;float:left;}
+div.achievement_img{ width:60px;height:60px;float:left;}
+img.achievement_img{ margin:5px; }
+img.achievement_master{ position:relative;top:20px;left:2px; }
+div.achievement_text{ width:820px;height:60px;float:left;position:relative; }
+div.achievement_dates{ width:220px;height:40px;float:right;margin:10px;text-align:right; }
+h3.achievement_adddate{ font-size:12px;padding:3px 3px 0px 0px;margin:0px;color:#939393; }
+h3.achievement_enddate{ font-size:12px;padding:3px 3px 0px 0px;margin:0px;color:#939393; }
+div.achievement_title{ float:left;width:450px/* was 580px */;height:30px;position:relative;padding:0px;margin:0px;vertical-align:middle; }
+h2.achievement_title{ font-weight:bold;font-size:18px;padding:5px 0px 0px 10px;margin:0px; }
+
+div.achievement_score{ float:right;z-index:100;position:relative;height:30px;width:130px;padding:0px;  }
+h2.achievement_score{ text-align:right;font-weight:bold;font-size:18px;padding:5px 10px 0px 0px;margin:0px; }
+
+div.achievement_score_container{ float:left;height:8px;width:578px;border:1px solid #AEAEAE;background-color:#3A3A3A }
+div.achievement_score_bar{ margin:2px;height:4px;background-color:#AEAEAE; }
+div.achievement_score_bar_100{ background-color:#9DC34C; }
+
+div.achievement_desc{ width:580px;height:20px;position:relative;top:0px;padding:0px;margin:0px;overflow:hidden; }
+h4.achievement_desc{ font-size:12px;padding:2px 0px 0px 25px;margin:0px;color:#939393; }
+div.achievement_desc_deploy{ width:20px;height:20px;position:absolute;text-align:center; }
+div.achievement_enddesc{ width:580px;position:relative;top:0px;padding:0px;margin:0px;display:none;border:1px solid #454545;border-bottom:0px;background-color:#262626; }
+h4.achievement_enddesc{ font-size:12px;padding:2px 0px 0px 25px;margin:0px;color:#939393; }
+div.achievement_subachievements{ padding-left:40px;display:none; }
+div.achievement_subachievements_spacer{ height:40px; border:0px solid #FFF }
+
