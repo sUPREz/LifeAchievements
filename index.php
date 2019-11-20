@@ -23,7 +23,9 @@ if( isset($_GET['Area']) )
 $_AchievementsTree = array();
 
 $Result = SQLQuery("select * from la_achievements WHERE MasterID is null OR `MasterID`=0 ORDER BY `Order` ASC, `AddDate` ASC");
-while ($row = mysql_fetch_array($Result)) {
+
+while ( $row = $Result->fetch(PDO::FETCH_ASSOC) ){
+//while ($row = mysql_fetch_array($Result)) {
   //$print_r($row);
   //__construct($ID,$Title,$Desc,$EndDesc,$AddDate,$EndDate,$MasterID)
   $Achievement = new Achievement();
@@ -34,7 +36,8 @@ while ($row = mysql_fetch_array($Result)) {
   $_AchievementsTree[ $index ]->SetAchievements($Achievement);
 
   $Result2 = SQLQuery('select * from la_achievements WHERE MasterID = "'.$row['ID'].'" ORDER BY `Order` ASC, `AddDate` ASC');
-  while ($row2 = mysql_fetch_array($Result2)) {
+  while ( $row2 = $Result2->fetch(PDO::FETCH_ASSOC) ){  
+  //while ($row2 = mysql_fetch_array($Result2)) {
     $Achievement2 = new Achievement();
     $Achievement2->SetAchievements($row2['ID'],$row2['Title'],$row2['Desc'],$row2['EndDesc'],$row2['AddDate'],$row2['EndDate'],$row2['MasterID'],$row2['AchieveScore'],$row2['AchieveComplete'],$row2['Order']);
     $_AchievementsTree[$index]->AddSubAchievements($Achievement2);

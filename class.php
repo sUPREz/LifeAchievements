@@ -115,9 +115,11 @@ class Achievement
     $return .= $PHP_EOL.'  </div>';
     $return .= $PHP_EOL.'  <div class="achievement_text" id="achievement_text_'.$this->ID.'">';
     $return .= $PHP_EOL.'    <div class="achievement_dates">';
-    $return .= $PHP_EOL.'      <h3 class="achievement_adddate">Ajout&eacute; : '.utf8_decode( strftime( "%d %B %Y %H:%I:%S" , strtotime( $AddDate ) ) ).'</h3>';
+    //$return .= $PHP_EOL.'      <h3 class="achievement_adddate">Ajout&eacute; : '.utf8_decode( strftime( "%d %B %Y %H:%I:%S" , strtotime( $AddDate ) ) ).'</h3>';
+    $return .= $PHP_EOL.'      <h3 class="achievement_adddate">Ajout&eacute; : '.strftime( "%d %B %Y %H:%I:%S" , strtotime( $AddDate ) ).'</h3>';
     if( $this->EndDate )
-      $return .= $PHP_EOL.'      <h3 class="achievement_enddate">Termin&eacute; : '.utf8_decode( strftime( "%d %B %Y %H:%I:%S" , strtotime( $EndDate ) ) ).'</h3>';
+      //$return .= $PHP_EOL.'      <h3 class="achievement_enddate">Termin&eacute; : '.utf8_decode( strftime( "%d %B %Y %H:%I:%S" , strtotime( $EndDate ) ) ).'</h3>';
+      $return .= $PHP_EOL.'      <h3 class="achievement_enddate">Termin&eacute; : '.strftime( "%d %B %Y %H:%I:%S" , strtotime( $EndDate ) ).'</h3>';
     $return .= $PHP_EOL.'    </div>';
     $return .= $PHP_EOL.'    <div class="achievement_title" id="achievement_title_'.$this->ID.'">';
     $return .= $PHP_EOL.'      <h2 class="achievement_title">'.$this->Title.'</h2>';
